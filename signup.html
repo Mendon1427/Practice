@@ -1,7 +1,4 @@
-<!DOCTYPE HTML>
-
 <html>
-
 <head>
   <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="main.css">
@@ -9,20 +6,51 @@
 
 <body>
         <div class="main">
-			<img src="img/b.jpg" class="b">
-	<h1> Signup Here</h1>
-		<form>
-		 <input type="text" name="" placeholder="First Name">
-		 <input type="text" name="" placeholder="Last Name">
-		 <input type="text" name="" placeholder="Email">
-		 <input type="text" name="" placeholder="Phone Number">
-		 <input type="password" name="" placeholder="Enter Password">
-		 <input type="password" name="" placeholder="Confirm Password">
-		 <input type="text" name="" placeholder="Address">
-		 <input type="text" name="" placeholder="Pincode">
-		 <input type="submit" name="" value="Submit"><br>
-		 <a href="a">Already have an Account?Log in</a>
-</form>
-             </div>
+            <div class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="toggle-btn" onclick="Signup_Customer()">Signup_Customer</button>
+					<button type="button" class="toggle-btn" onclick="Signup_Retailer()">Signup_Retailer</button>
+					
+				</div>				
+				<form id="Signup_Customer" class="input-group">
+					<input type="text" class="input-field" placeholder="First Name" required>
+					<input type="text" class="input-field" placeholder="Last Name" required>
+					<input type="email" class="input-field" placeholder="Email-Id" required>
+					<input type="text" class="input-field" placeholder="Password" required>
+					<input type="text" class="input-field" placeholder="Phone-Number" required>
+					<input type="text" class="input-field" placeholder="Address" required>
+					<input type="text" class="input-field" placeholder="Pincode" required>
+					<button type="submit" class="submit-btn">Signup_Customer</button>
+			    </form>
+				<form id="Signup_Retailer" class="input-group">
+					<input type="text" class="input-field" placeholder="First Name" required>
+					<input type="text" class="input-field" placeholder="Last Name" required>
+					<input type="email" class="input-field" placeholder="Email-Id" required>
+					<input type="text" class="input-field" placeholder="Password" required>
+					<input type="text" class="input-field" placeholder="Phone-Number" required>
+					<input type="text" class="input-field" placeholder="Address" required>
+					<input type="text" class="input-field" placeholder="Pincode" required>
+                    <input type="text" class="input-field" placeholder="Selling Items" required>
+					<button type="submit" class="submit-btn">Signup_Retailer</button>
+				</form>
+            </div>
+		</div>	
+	          <script>
+		var x = document.getElementById("Signup_Customer");
+	    var y = document.getElementById("Signup_Retailer");
+		var z = document.getElementById("btn");
+
+		function Signup_Retailer() {
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function Signup_Customer() {
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+	          </script>
 </body>
 </html>
