@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/retailer.css">
-
+ 
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 				   </div>
  
 				   <div class="CTA">
-					  <input type="submit" value="Login">
+					  <input type="submit" id="registerRegis" value="Login">
 					  <a href="#" class="switch">I'm New</a>
 				   </div>
 				</form>
@@ -63,28 +63,28 @@
  
 				   <div class="form-group">
 					  <label for="name">First Name</label>
-					  <input type="text" name="firstrname" id="name" class="name">
+					  <input type="text" name="firstrname" id="firstName" class="name">
 					  <span class="error"></span>
 				   </div>
 				   <div class="form-group">
 					<label for="name">Last Name</label>
-					<input type="text" name="lastname" id="name" class="name">
+					<input type="text" name="lastname" id="lastName" class="name">
 					<span class="error"></span>
 				 </div>
 				 <div class="form-group">
 					<label for="shop">Shop Name</label>
-					<input type="text" name="shop" id="shop" class="shop">
+					<input type="text" name="shop" id="shopname" class="shop">
 					<span class="error"></span>
 				 </div>
 				   <div class="form-group">
 					  <label for="email">Email Adderss</label>
-					  <input type="email" name="emailAdress" id="email" class="email">
+					  <input type="email" name="email" id="email" class="email">
 					  <span class="error"></span>
 				   </div>
  
 				   <div class="form-group">
 					  <label for="phone">Phone Number</label>
-					  <input type="text" name="phone" id="phone">
+					  <input type="text" name="phone" id="phone" required>
 				   </div>
  
 				   <div class="form-group">
@@ -96,24 +96,43 @@
 				  
 				   <div class="form-group">
 					<label for="address">Address</label>
-					<input type="text" name="passwordCon" id="passwordCon" class="passConfirm">
+					<input type="text" name="address" id="address" class="address">
 					<span class="error"></span>
 				 </div>
 				 
 				 <div class="form-group">
 				  <label for="address">Pincode</label>
-				  <input type="text" name="passwordCon" id="passwordCon" class="passConfirm">
+				  <input type="text" name="pincode" id="pincode" class="pincode">
 				  <span class="error"></span>
 			   </div>
  
 				   <div class="CTA">
-					  <input type="submit" value="Signup Now" id="submit">
+					  <input type="submit" value="Signup Now" id="registerRegis">
 					  <a href="#" class="switch">I have an account</a>
 				   </div>
 				</form>
 			 </div><!-- End Signup Form -->
 		  </div>
 	   </div>
+	   
+ <div class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Successful</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <p>Login to proceed</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
  
 	</section>
 
@@ -182,5 +201,6 @@ $('a.profile').on('click', function () {
 
 });
 	 </script>
+	  <script type="text/javascript" src="js/retailerRegis.js"></script>
 </body>
 </html>
